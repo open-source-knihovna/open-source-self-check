@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7ea6042f1c3ecdbe4719bf23e26627df",
-    "content-hash": "c73906d8a3d685abe4661e3ca47aefac",
+    "hash": "7b2dfeda79aee01fa6e59de107c8c756",
+    "content-hash": "889edb280d0691ec391346a8c57bcee8",
     "packages": [
         {
             "name": "cap60552/php-sip2",
@@ -218,6 +218,50 @@
                 "zf2"
             ],
             "time": "2016-10-24 13:23:32"
+        },
+        {
+            "name": "zendframework/zend-component-installer",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-component-installer.git",
+                "reference": "28838e36838682bb980bf080fa6eded355186df1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-component-installer/zipball/28838e36838682bb980bf080fa6eded355186df1",
+                "reference": "28838e36838682bb980bf080fa6eded355186df1",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.2.2",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^4.7",
+                "roave/security-advisories": "dev-master",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "class": "Zend\\ComponentInstaller\\ComponentInstaller"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\ComponentInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Composer plugin for automating component registration in zend-mvc and Expressive applications",
+            "time": "2017-01-09 14:47:43"
         },
         {
             "name": "zendframework/zend-config",
