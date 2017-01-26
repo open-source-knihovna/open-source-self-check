@@ -1,5 +1,3 @@
-This is a Subversion repository; use the 'svnadmin' tool to examine
-it.  Do not add, delete, or modify files here unless you know how
-to avoid corrupting the repository.
+This is reincarnation of old open-source-self-check application
 
-Visit http://subversion.tigris.org/ for more information.
+Till now just an conversion from svn and skeleton code, but we have many plans, see the Issues.
