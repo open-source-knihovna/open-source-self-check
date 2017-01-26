@@ -4,8 +4,8 @@
 get your system's sip2 repsonse messages for particular transactions
 
 */
+require __DIR__ . '/vendor/autoload.php';
 include_once('config.php');
-include_once('includes/sip2.php');
 
 $formaction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {

@@ -1,7 +1,9 @@
 <?php
+
+require __DIR__ . '/vendor/autoload.php';
+
 session_start();
 include_once('config.php');
-include_once('includes/sip2.php');
 
 $formaction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {

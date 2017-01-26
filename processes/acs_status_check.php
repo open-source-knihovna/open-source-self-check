@@ -2,10 +2,8 @@
 /* 
 	ACS status check page (called from the out of order page)
 */
-
+require __DIR__ . '/../vendor/autoload.php';
 include_once('../config.php');
-include_once('../includes/sip2.php');
-include_once('../includes/json_encode.php');
 
 $mysip = new sip2;
 

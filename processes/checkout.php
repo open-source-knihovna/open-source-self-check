@@ -3,9 +3,8 @@
 	checkout processing page
 */
 session_start();
+require __DIR__ . '/../vendor/autoload.php';
 include_once('../config.php');
-include_once('../includes/sip2.php');
-include_once('../includes/trimbylength.php');
 
 //set some variables
 $item_type='';

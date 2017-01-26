@@ -1,7 +1,6 @@
 <?php
 session_start();
-include_once('../includes/html2text.php'); 
-include_once('../includes/phpmailer/class.phpmailer.php');
+require __DIR__ . '/../vendor/autoload.php';
 include_once('../config.php');
 
 //make the mail text
