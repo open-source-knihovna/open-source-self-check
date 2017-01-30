@@ -36,13 +36,9 @@ return [
         ],
     ],
     'service_manager' => array(
-        'abstract_factories' => array(
-//            'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-//            'Zend\Log\LoggerAbstractServiceFactory',
-        ),
-        'aliases' => array(
-            'translator' => 'MvcTranslator',
-        ),
+        'factories' => [
+            \Zend\I18n\Translator\TranslatorInterface::class => \Zend\I18n\Translator\TranslatorServiceFactory::class,
+        ],
     ),
    'translator' => array(
         'translation_file_patterns' => array(
@@ -73,5 +69,10 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+    ],
+    'view_helpers' => [
+        'invokables' => [
+            'translate' => \Zend\I18n\View\Helper\Translate::class
+        ]
     ],
 ];
