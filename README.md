@@ -1,3 +1,5 @@
-This is reincarnation of old open-source-self-check application
+Tohu
+====
+Main goal of this project is build prototype of self-check station for libraries, software and hardware based on open architecture and code.
 
-Till now just an conversion from svn and skeleton code, but we have many plans, see the Issues.
+Read more on wiki: https://github.com/open-source-knihovna/open-source-self-check/wiki
