@@ -8,5 +8,4 @@ namespace Tohu\ILS\Driver;
 
 abstract class AbstractDriver implements DriverInterface
 {
-
 }
