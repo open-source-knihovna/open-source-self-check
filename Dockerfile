@@ -5,7 +5,7 @@ LABEL maintainer "josef.moravec@gmail.com"
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends apt-utils git libicu-dev zlib1g-dev && \
     apt-get clean -y && \
-    rm -rf /var/lib/apt/lists/a*
+    rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install intl json mbstring mysqli pdo pdo_mysql zip
 
