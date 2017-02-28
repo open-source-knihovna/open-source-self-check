@@ -1,7 +1,7 @@
-zf:
+tohu:
   build: .
   dockerfile: Dockerfile
   ports:
    - "8080:80"
-  volumes:
-   - .:/var/www
+#  volumes:
+#   - .:/var/www
