@@ -7,119 +7,12 @@ require __DIR__ . '/../vendor/autoload.php';
 include_once('../config.php');
 
 //set some variables
-$item_type='';
-$call_number='';
-$title=''; 
-$permanent_location='';
 $response_message='';
-$due_date='';
 $action_message='';
-$RenewalOk='';
-$OK='';
 
 if (!empty($_SESSION['patron_barcode'])){
-	if (empty($_POST['barcode'])){ //if for some reason the item barcode posted is empty fill in a bunk one
-		$item_barcode='bunk_barcode';
-	} else {
-		$item_barcode=$_POST['barcode'];
-	}
-
-	$mysip = new sip2;
-	
-	// Set host name
-	$mysip->hostname = $sip_hostname;
-	$mysip->port = $sip_port;
-	
-	// Identify a patron
-	$mysip->patron = $_SESSION['patron_barcode'];
-	
-	// connect to SIP server
-	$connect=$mysip->connect();
-		
-		if(!$connect){ //if the connection failed go to the out of order page
-			echo 	'<script type="text/javascript">
-						$(document).ready(function(){
-							window.location.href="index.php?page=out_of_order";
-						});
-					</script>';
-			exit;
-		}
-	
-	if(!empty($sip_login)){
-		$sc_login=$mysip->msgLogin($sip_login,$sip_password);
-		$mysip->parseLoginResponse($mysip->get_message($sc_login));
-	}
-	
-	// get either renewal or checkout response
-	if (!empty($_POST['renew'])){ //is this a renewal or no?
-		$cko = $mysip->msgRenew($item_barcode, $sc_location);
-		// parse the raw response into an array
-		$checkout = $mysip->parseRenewResponse($mysip->get_message($cko));
-	} else {
-		$cko = $mysip->msgCheckout($item_barcode, $sc_location);
-		// parse the raw response into an array
-		$checkout = $mysip->parseCheckoutResponse($mysip->get_message($cko));
-	}
-	
-	//put the checkout or renewal response into variables
-	if(!empty($checkout['fixed']['Ok'])){
-		$OK=$checkout['fixed']['Ok'];
-	}
-	if (!empty($checkout['fixed']['RenewalOk'])){
-		$RenewalOk=$checkout['fixed']['RenewalOk'];
-	}
-	if (!empty($checkout['variable']['AF'][0])){
-		$response_message=trim($checkout['variable']['AF'][0]);//system response message
-	}
-	//get item info response
-	$iteminfo = $mysip->msgItemInformation($item_barcode);
-	// parse the raw response into an array
-	$item = $mysip->parseItemInfoResponse( $mysip->get_message($iteminfo));
-	
-	//put the item info response into variables
-	if (!empty($item['variable']['CR'][0])){
-		$item_type=$item['variable']['CR'][0];
-	}
-	if (!empty($item['variable']['CS'][0])){
-		$call_number=$item['variable']['CS'][0];
-	}
-	if (!empty($item['variable']['AQ'][0])){
-		$permanent_location=$item['variable']['AQ'][0];
-	}
-	if (!empty($checkout['variable']['AJ'][0])){
-		$title=$checkout['variable']['AJ'][0]; 
-			if (stripos($title,'/')!==false){
-				$title=substr($title,0,stripos($title,'/'));
-			} 
-		$title=ucwords(TrimByLength($title,45,false));
-	}
-	
-	if ($OK!=1){
-		
-		if (($RenewalOk=='Y' OR stripos($response_message,$already_ckdout_to_you)!==false) && empty($_POST['renew'])){ //see if this item is already checked out to this user and show renew prompt if it is
-		
-			include_once('../includes/renew.php');
-			exit;
-		
-		} else {
-		
-			//the item didn't get caught in any of our checkout exceptions so call the error prompt box
-			include_once('../includes/general_cko_error.php');
-			exit;
-				
-		} 
-	
-	}
-	
-	$ptrnmsg = $mysip->msgPatronInformation('charged'); //get checkout count again
-	
-	$patron_info = $mysip->parsePatronInfoResponse( $mysip->get_message($ptrnmsg));
-	
 	$_SESSION['checkouts']=$patron_info['fixed']['ChargedCount']; //checkouts
 	$_SESSION['checkouts_this_session']=$_SESSION['checkouts_this_session']+1;
-	
-	$due_date=strtotime($checkout['variable']['AH'][0]);
-	$due_date=date($due_date_format, $due_date);
 	
 	echo '
 	<tr>
@@ -181,8 +74,6 @@ if (!empty($_SESSION['patron_barcode'])){
 	});
 	</script>';
 	
-	//end sip2 session
-	$mysip->msgEndPatronSession();
 	exit;
 	
 }
