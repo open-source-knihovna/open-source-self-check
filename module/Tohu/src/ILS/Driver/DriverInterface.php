@@ -4,7 +4,7 @@
  * @license   https://www.gnu.org/licenses/gpl.html GNU GENERAL PUBLIC LICENSE Version 3
  */
 
-namespace Tohu\ILS;
+namespace Tohu\ILS\Driver;
 
 interface DriverInterface
 {
