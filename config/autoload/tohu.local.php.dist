@@ -1,0 +1,17 @@
+<?php
+return [
+    "tohu" => [
+        // Options SIP2, Koha, NCIP
+        "driver" => "__ILS_DRIVER__", 
+    
+        // Name of institution
+        "libraryName" => "__LIBRARY_NAME__",
+
+        // Self-check name
+        "selfcheckName" => "__SELFCHECK_NAME__",
+
+        // Logo - url or filename
+        "logo" => "__LOGO__",
+    ],
+];
+

@@ -1,0 +1,10 @@
+<?php
+return [
+    "driver" => [
+        // SIP server hostname or IP
+        "server" => "__SIP_SERVER__",
+
+        // SIP server port
+        "port" => "__SIP_PORT__",
+    ],
+];

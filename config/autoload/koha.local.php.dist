@@ -1,0 +1,7 @@
+<?php 
+return [
+    "driver" => [
+        // REST API endpoint
+        "api" => "__API_URL__",
+    ],
+];

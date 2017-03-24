@@ -1,5 +1,6 @@
 vendor/
 config/development.config.php
+config/local/*.php
 data/cache/*
 !data/cache/.gitkeep
 .php_cs.cache

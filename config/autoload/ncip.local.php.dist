@@ -1,0 +1,10 @@
+<?php
+return [
+    "driver" => [
+        // NCIP server hostname or IP address
+        "server" => "__NCIP_SERVER__",
+
+        // Agency Id
+        "agencyId" => "__NCIP_AGENCY__",
+    ],
+];

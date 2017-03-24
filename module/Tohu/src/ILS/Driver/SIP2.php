@@ -15,18 +15,11 @@ class SIP2 extends AbstractDriver
      */
     protected $connection;
 
-    /*
-     * @var SIP Config
-     */
-    protected $config;
-
-    public function init()
+    public function init($config = null)
     {
         $this->connection = new Sip2Connector();
-        $config = $this->getServiceManager()->getConfig();
-        $this->config = $config->sip;
-        $this->connection->hostname = $this->config->hostname;
-        $this->connection->port = $this->config->port;
+        $this->connection->hostname = $config["ils"]["server"] ?? null;
+        $this->connection->port = $config["ils"]["port"] ?? null;
     }
 
     public function checkout($patron, $barcode)
