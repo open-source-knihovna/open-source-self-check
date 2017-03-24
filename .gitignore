@@ -2,3 +2,4 @@ vendor/
 config/development.config.php
 data/cache/*
 !data/cache/.gitkeep
+.php_cs.cache
