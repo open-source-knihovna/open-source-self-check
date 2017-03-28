@@ -8,8 +8,11 @@
             <div class="card-block">
                 <h3 class="card-title"><label for="library-card"><?=$this->translate("Enter your library card:")?></label></h3>
                 <p class="card-text">
-                    <form id="" >
-                        <input id="library-card" name="library-card" type="text" />
+                    <form id="" class="form-inline">
+                        <div class="form-group">
+                            <input id="library-card" name="library-card" class="form-control" type="text"  placeholder="<?=$this->translate("Your library card number")?>"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><?=$this->translate("Submit")?></button>
                     </form>
                 </p>
             </div>
