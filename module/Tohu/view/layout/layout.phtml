@@ -29,6 +29,10 @@
                     <img id="logo" src="<?=$this->config["logo"]?>" />
                     <?=$this->config["libraryName"]?>
                 </h1>
+                <?php if(isset($this->config["selfcheckName"]) && !empty($this->config["selfcheckName"])):
+                ?>
+                    <h2><small><?=$this->config["selfcheckName"]?></small></h2>
+                <?php endif; ?>
             </header>
             <hr />
             <?= $this->content ?>
