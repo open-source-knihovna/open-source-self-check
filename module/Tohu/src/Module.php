@@ -14,4 +14,13 @@ class Module
     {
         return include __DIR__ . '/../config/module.config.php';
     }
+
+    public function onBootstrap($e)
+    {
+        $app = $e->getParam('application');
+        $config = $app->getConfig();
+        $viewModel = $app->getMvcEvent()->getViewModel();
+        $viewModel->config = $config["tohu"];
+        $viewModel->driver = $config[strtolower($config["tohu"]["driver"])];
+    }
 }

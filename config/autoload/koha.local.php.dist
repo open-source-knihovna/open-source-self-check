@@ -1,6 +1,6 @@
 <?php 
 return [
-    "driver" => [
+    "koha" => [
         // REST API endpoint
         "api" => "__API_URL__",
     ],

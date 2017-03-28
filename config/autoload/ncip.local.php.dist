@@ -1,6 +1,6 @@
 <?php
 return [
-    "driver" => [
+    "ncip" => [
         // NCIP server hostname or IP address
         "server" => "__NCIP_SERVER__",
 
