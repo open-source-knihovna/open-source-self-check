@@ -22,16 +22,40 @@ class SIP2 extends AbstractDriver
         $this->connection->port = $config["ils"]["port"] ?? null;
     }
 
-    public function checkout($patron, $barcode)
+    protected function connect($patronBarcode) 
     {
-        $return = [];
         $this->connection->patron = $patron;
         $connectResponse = $this->connection->connect();
         if (!$connectResponse) {
             throw new \Exception("Can't connect to SIP2 server. Are the hostname and port set properly?");
         }
         $loginResponse = $this->connection->msgLogin($this->config->login, $this->config->password);
+        /* TODO: some error handling? */
         $this->connection->parseLoginResponse($this->connection->get_message($loginResponse));
+    }
+
+    protected function getCurrentPatronInfo()
+    {
+        $patronResponse = $this->connection->msgPatronInformation('charged'); //get checkout count again
+        $patron = $this->connection->parsePatronInfoResponse($this->connection->get_message($patronResponse));
+        return [
+            'barcode' => $patronBarcode,
+            'name' => $patron['variable']['AE'][0] ?? '',
+            'email' => $patron['variable']['BE'][0] ?? '',
+            'overdues' => $patron['fixed']['OverdueCount'] ?? 0,
+            'holds' => $patron['fixed']['HoldCount'] ?? 0,
+            'checkouts' => $patron['fixed']['ChargedCount'] ?? 0,
+            'fines' => $patron['variable']['BV'][0] ?? 0,
+            'blocked' => (strpos($patron['fixed']['PatronStatus'], 'Y') === false ) ? false : true,
+        ];
+    }
+
+    public function checkout($patron, $barcode)
+    {
+        $return = [];
+
+        $this->connect($patron);
+
         $checkoutResponse = $this->connection->msgCheckout($barcode, $this->config->location);
         $checkout = $this->connection->parseCheckoutResponse($this->connection->get_message($checkoutResponse));
         $item = $this->connection->msgItemInformation($barcode);
@@ -42,11 +66,17 @@ class SIP2 extends AbstractDriver
             "location" => $itet['variable']['AQ'][0] ?? null,
             "title" => $checkout['variable']['AJ'][0] ?? null,
         ];
-        $patronResponse = $this->connection->msgPatronInformation('charged'); //get checkout count again
-    $patron = $this->connection->parsePatronInfoResponse($this->connection->get_message($patronResponse));
-        $return["patron"] = $patron;
+        $return["patron"] = $this->getCurrentPatronInfo();
         $return["dueDate"] = $checkout['variable']['AH'][0] ?? null;
-        $rhis->connection->msgEndPatronSession();
+        $this->connection->msgEndPatronSession();
         return $return;
+    }
+
+    public function getPatron($patronBarcode) 
+    {
+        $this->connect($patronBarcode);
+        $patron = $this->getCurrentPatronInfo();
+        $this->connection->msgEndPatronSession();
+        return $patron;
     }
 }
