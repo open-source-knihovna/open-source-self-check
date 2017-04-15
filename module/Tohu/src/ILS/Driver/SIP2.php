@@ -22,7 +22,7 @@ class SIP2 extends AbstractDriver
         $this->connection->port = $config["ils"]["port"] ?? null;
     }
 
-    protected function connect($patronBarcode) 
+    protected function connect($patronBarcode)
     {
         $this->connection->patron = $patron;
         $connectResponse = $this->connection->connect();
@@ -46,7 +46,7 @@ class SIP2 extends AbstractDriver
             'holds' => $patron['fixed']['HoldCount'] ?? 0,
             'checkouts' => $patron['fixed']['ChargedCount'] ?? 0,
             'fines' => $patron['variable']['BV'][0] ?? 0,
-            'blocked' => (strpos($patron['fixed']['PatronStatus'], 'Y') === false ) ? false : true,
+            'blocked' => (strpos($patron['fixed']['PatronStatus'], 'Y') === false) ? false : true,
         ];
     }
 
@@ -72,7 +72,7 @@ class SIP2 extends AbstractDriver
         return $return;
     }
 
-    public function getPatron($patronBarcode) 
+    public function getPatron($patronBarcode)
     {
         $this->connect($patronBarcode);
         $patron = $this->getCurrentPatronInfo();
