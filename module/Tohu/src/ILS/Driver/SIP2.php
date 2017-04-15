@@ -50,6 +50,16 @@ class SIP2 extends AbstractDriver
         ];
     }
 
+    protected function getItemInfo($barcode)
+    {
+        $itemResponse = $this->connection->msgItemInformation($barcode);
+        $item = $this->connection->parseItemInfoResponse($this->connection->get_message($itemResponse));
+        return [
+            'barcode' => $barcode,
+            'id' => $item['variable']['AB'][0] ?? '',
+        ];
+    }
+
     public function checkout($patron, $barcode)
     {
         $return = [];
@@ -60,16 +70,31 @@ class SIP2 extends AbstractDriver
         $checkout = $this->connection->parseCheckoutResponse($this->connection->get_message($checkoutResponse));
         $item = $this->connection->msgItemInformation($barcode);
         $return["status"] = $checkout['fixed']['Ok'] ?? false;
+        /* TODO: use getItemInfo method */
         $return["item"] = [
             "type" => $item['variable']['CR'][0] ?? null,
             "callnumber" => $item['variable']['CS'][0] ?? null,
-            "location" => $itet['variable']['AQ'][0] ?? null,
+            "location" => $item['variable']['AQ'][0] ?? null,
             "title" => $checkout['variable']['AJ'][0] ?? null,
         ];
         $return["patron"] = $this->getCurrentPatronInfo();
         $return["dueDate"] = $checkout['variable']['AH'][0] ?? null;
         $this->connection->msgEndPatronSession();
         return $return;
+    }
+
+    public function checkin($patron, $barcode)
+    {
+        $this->connect($patron);
+
+        $checkinResponse = $this->connection->msgCheckin($barcode, '');
+        $checkin = $this->connection->parseCheckinResponse($this->connection->get_message($checkinResponse));
+        $item = $this->getItemInfo($barcode);
+        $this->connection->msgEndPatronSession();
+        return [
+            'item' => $item,
+            'status' => $checkin['fixed']['Ok'] === "Y" ? true : false,
+        ];
     }
 
     public function getPatron($patronBarcode)
