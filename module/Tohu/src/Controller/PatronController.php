@@ -7,11 +7,14 @@
 namespace Tohu\Controller;
 
 use Zend\View\Model\ViewModel;
+use Tohu\Controller\AbstractBase;
+use Tohu\ILS\DriverInterface;
 
-class IndexController extends AbstractBase
+class PatronController extends AbstractBase
 {
-    public function indexAction()
+    public function infoAction()
     {
+        $driver = $this->getILS();
         return new ViewModel();
     }
 }

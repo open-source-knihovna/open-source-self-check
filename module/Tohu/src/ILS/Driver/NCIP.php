@@ -22,7 +22,7 @@ class NCIP extends AbstractDriver
      */
     protected $ncip;
 
-    public function init($config = null)
+    public function init($config = [])
     {
         $this->ncipUrl = $config["ils"]["server"] ?? null;
         $this->agencyId = $config["ils"]["agencyId"] ?? null;

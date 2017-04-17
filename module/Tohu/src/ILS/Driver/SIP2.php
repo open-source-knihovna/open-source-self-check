@@ -15,7 +15,7 @@ class SIP2 extends AbstractDriver
      */
     protected $connection;
 
-    public function init($config = null)
+    public function init(array $config = [])
     {
         $this->connection = new Sip2Connector();
         $this->connection->hostname = $config["ils"]["server"] ?? null;

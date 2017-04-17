@@ -8,6 +8,7 @@ namespace Tohu\ILS\Driver;
 
 interface DriverInterface
 {
+    public function init(array $config);
     public function checkout($patron, $itemBarcode);
     public function checkin($patron, $itemBarcode);
     public function getPatron($patronBarcode);

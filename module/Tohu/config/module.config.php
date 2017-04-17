@@ -33,6 +33,16 @@ return [
                     ],
                 ],
             ],
+            'patron' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route' => '/patron[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\PatronController::class,
+                        'action' => 'info',
+                    ],
+                ],
+            ]
         ],
     ],
     'service_manager' => array(
@@ -51,7 +61,8 @@ return [
     ),
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\IndexController::class => Factory\IndexControllerFactory::class,
+            Controller\PatronController::class => Factory\PatronControllerFactory::class,
         ],
     ],
     'view_manager' => [
