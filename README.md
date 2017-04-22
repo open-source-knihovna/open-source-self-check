@@ -15,4 +15,4 @@ For easy deployment there is prepared Docker image
 1. Install docker and docker-compose
 2. Clone this repository
 3. Run 'sudo docker-compose up --build'
-4. Go to http://localhost:8080 to test
+4. Go to http://localhost:8082 to test
