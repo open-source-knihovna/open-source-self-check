@@ -1,4 +1,4 @@
-<h1>An error occurred</h1>
+<h1><?=$this->translate("An error occurred")?></h1>
 <h2><?= $this->message ?></h2>
 
 <?php if (! empty($this->display_exceptions)) : ?>
@@ -6,18 +6,18 @@
         && ($this->exception instanceof \Exception || $this->exception instanceof \Error)) : ?>
 <hr/>
 
-<h2>Additional information:</h2>
+<h2><?=$this->translate("Additional information")?>:</h2>
 <h3><?= get_class($this->exception) ?></h3>
 <dl>
-    <dt>File:</dt>
+    <dt><?=$this->translate("File")?>:</dt>
     <dd>
         <pre><?= $this->exception->getFile() ?>:<?= $this->exception->getLine() ?></pre>
     </dd>
-    <dt>Message:</dt>
+    <dt><?=$this->translate("Message")?>:</dt>
     <dd>
         <pre><?= $this->escapeHtml($this->exception->getMessage()) ?></pre>
     </dd>
-    <dt>Stack trace:</dt>
+    <dt><?=$this->translate("Stack trace")?>:</dt>
     <dd>
         <pre><?= $this->escapeHtml($this->exception->getTraceAsString()) ?></pre>
     </dd>
@@ -26,22 +26,22 @@
         <?php if ($ex = $this->exception->getPrevious()) : ?>
 <hr/>
 
-<h2>Previous exceptions:</h2>
+<h2><?=$this->translate("Previous exceptions")?>:</h2>
 <ul class="list-unstyled">
             <?php $icount = 0 ?>
             <?php while ($ex) : ?>
     <li>
         <h3><?= get_class($ex) ?></h3>
         <dl>
-            <dt>File:</dt>
+	    <dt><?=$this->translate("File")?>:</dt>
             <dd>
                 <pre><?= $ex->getFile() ?>:<?= $ex->getLine() ?></pre>
             </dd>
-            <dt>Message:</dt>
+	    <dt><?=$this->translate("Message")?>:</dt>
             <dd>
                 <pre><?= $this->escapeHtml($ex->getMessage()) ?></pre>
             </dd>
-            <dt>Stack trace:</dt>
+	    <dt><?=$this->translate("Stack trace")?>:</dt>
             <dd>
                 <pre><?= $this->escapeHtml($ex->getTraceAsString()) ?></pre>
             </dd>
@@ -50,7 +50,7 @@
                 <?php
                 $ex = $ex->getPrevious();
                 if (++$icount >= 50) {
-                    echo '<li>There may be more exceptions, but we do not have enough memory to process it.</li>';
+			echo '<li>' . $this->translate("There may be more exceptions, but we do not have enough memory to process it.") . '</li>';
                     break;
                 }
                 ?>
@@ -58,6 +58,6 @@
 </ul>
         <?php endif ?>
     <?php else : ?>
-        <h3>No Exception available</h3>
+    <h3><?=$this->translate("No Exception available")?></h3>
     <?php endif ?>
 <?php endif ?>
