@@ -12,8 +12,9 @@ abstract class AbstractDriver implements DriverInterface
 {
     public function init(array $config = [])
     {
-        throw new MethodNotImplementedException("Method checkout not implemented");
+        throw new MethodNotImplementedException("Method init not implemented");
     }
+
     public function checkout($patron, $itemBarcode)
     {
         throw new MethodNotImplementedException("Method checkout not implemented");
