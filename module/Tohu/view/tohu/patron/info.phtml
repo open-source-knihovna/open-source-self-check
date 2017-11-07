@@ -1,2 +1,41 @@
-<h2><?=$this->translate("Patron account")?></h2>
+<h2><?=$this->translate("Patron account for")?> <?=$this->patron['name']?></h2>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header"><strong><?=$this->patron['name']?></strong></div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fa fa-id-card-o"></i> <?=$this->translate("Library card")?>: <strong><?=$this->patron['barcode']?></strong></li>
+                <?php if (isset($this->patron['email'])): ?>
+                    <li class="list-group-item"><i class="fa fa-envelope-o"></i> <?=$this->translate("E-mail")?>: <strong><?=$this->patron['email']?></strong></li>
+                <?php endif; ?>
+                <?php if (isset($this->patron['fines'])): ?>
+                    <li class="list-group-item"><i class="fa fa-money"></i> <?=$this->translate("Fines")?>: <span class="badge badge-danger"><strong><?=$this->patron['fines']?></strong></span></li>
+                <?php endif; ?>
+                <li class="list-group-item"><i class="fa fa-chain"></i> <?=$this->translate("Holds")?>: <span class="badge badge-info"><strong><?=$this->patron['holds'] ?? 0 ?></strong></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <?php if ($this->patron['blocked']): ?>
+            <div class="alert alert-danger"><?=$this->translate("Your account was blocked. Contact library for further assistance.")?></div>
+        <?php endif; ?>
+        <?php if (count($this->patron['overdues']) > 0 ): ?>
+            <div class="alert alert-warning"><?=$this->translate("You have some checkout overdue. You may or may not be able to checkout more items. It will depend on your library's policy.")?></div>
+        <?php endif; ?>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th><?=$this->translate("Title")?></th>
+                    <th><?=$this->translate("Library")?></th>
+                    <th><?=$this->translate("Date checked out")?></th>
+                    <th><?=$this->translate("Date due")?></th>
+                    <th><?=$this->translate("Action")?></th>
+                <tr>
+            </thead>
+        </table>
+    </div>
+
+</div>
+<?php
+var_dump($this->patron);
 

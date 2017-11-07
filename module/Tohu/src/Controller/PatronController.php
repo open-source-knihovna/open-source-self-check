@@ -15,6 +15,8 @@ class PatronController extends AbstractBase
     public function infoAction()
     {
         $driver = $this->getILS();
-        return new ViewModel();
+        $patronBarcode = $this->params()->fromQuery('library-card');
+        $patron = $driver->getPatron($patronBarcode);
+        return new ViewModel([ 'patron' => $patron ]);
     }
 }
