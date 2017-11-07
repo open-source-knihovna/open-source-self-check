@@ -28,12 +28,20 @@ function configure_sip {
     driverconfig=$sip2config
 }
 
+function configure_demo {
+    sed -i "s#__ILS_DRIVER__#Demo#g" $mainconfig
+    cp "$democonfig.dist" $democonfig
+    echo "No configuration needed for Demo ILS"
+    driverconfig=$democonfig
+}
+
 dir=$(dirname $0)
 configdir="$dir/config/autoload"
 mainconfig="$configdir/tohu.local.php"
 kohaconfig="$configdir/koha.local.php"
 ncipconfig="$configdir/ncip.local.php"
 sip2config="$configdir/sip2.local.php"
+democonfig="$configdir/demo.local.php"
 
 if [ -f $mainconfig ]; then
     echo
@@ -66,8 +74,9 @@ echo "Possible options are:"
 echo "1. Koha"
 echo "2. NCIP"
 echo "3. SIP2"
+echo "4. Demo - for testing/demonstration purposes only"
 
-while [[ ! $driver =~ ^[1-3]{1}$ ]]; do
+while [[ ! $driver =~ ^[1-4]{1}$ ]]; do
     read -e -p "Enter your choice: " driver
 done
 
@@ -79,6 +88,8 @@ elif [ "$driver" == "2" ]; then
     configure_ncip
 elif [ "$driver" == "3" ]; then
     configure_sip
+elif [ "$driver" == "4" ]; then
+    configure_demo
 fi
 
 echo "Configuration finished"

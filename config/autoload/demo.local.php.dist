@@ -1,0 +1,6 @@
+<?php
+return [
+    "demo" => [
+        // No configuration needed
+    ],
+];
