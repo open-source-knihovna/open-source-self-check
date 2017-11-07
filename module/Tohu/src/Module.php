@@ -15,9 +15,9 @@ class Module
         return include __DIR__ . '/../config/module.config.php';
     }
 
-    public function onBootstrap($e)
+    public function onBootstrap($event)
     {
-        $app = $e->getParam('application');
+        $app = $event->getParam('application');
         $config = $app->getConfig();
         $viewModel = $app->getMvcEvent()->getViewModel();
         $viewModel->config = $config["tohu"];
