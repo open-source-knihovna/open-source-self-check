@@ -22,6 +22,7 @@ class Demo extends AbstractDriver
                 'callnumber' => '321.45',
                 'location' => 'Main library',
                 'title' => 'The best book ever',
+                'barcode' => $itemBarcode,
             ],
             'patron' => $this->getPatron($patron),
             'dueDate' => date('c', time() + 1000 * 60 *  60 * 24 * 30), // now plus 30 days
@@ -36,6 +37,7 @@ class Demo extends AbstractDriver
                 'callnumber' => '321.45',
                 'location' => 'Main library',
                 'title' => 'The best book ever',
+                'barcode' => $itemBarcode,
             ],
             'status' => false,
         ];
@@ -44,7 +46,7 @@ class Demo extends AbstractDriver
     public function getPatron($patronBarcode)
     {
         return [
-            'barcode' => "100020003000",
+            'barcode' => $patronBarcode,
             'name' => "John Doe",
             'email' => "john.doe@example.com",
             'overdues' => 3,
