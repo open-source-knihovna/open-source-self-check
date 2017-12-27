@@ -7,7 +7,7 @@ RUN apt-get update -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install intl json mbstring mysqli pdo pdo_mysql zip
+RUN docker-php-ext-install intl json mbstring mysqli pdo pdo_mysql zip sockets
 
 RUN a2enmod rewrite && \
     sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-enabled/000-default.conf && \

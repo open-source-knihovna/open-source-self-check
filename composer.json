@@ -25,7 +25,8 @@
         "ext-pdo": "*",
         "ext-pdo_mysql": "*",
         "ext-zip": "*",
-        "danmichaelo/ncip": "^0.2.3"
+        "danmichaelo/ncip": "^0.2.3",
+        "ext-sockets": "*"
     },
     "license": "GPL-3.0",
     "authors": [
