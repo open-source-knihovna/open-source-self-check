@@ -1,6 +1,6 @@
 <h2><?=$this->translate("Patron account for")?> <?=$this->patron['name']?></h2>
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
         <div class="card">
             <div class="card-header"><strong><?=$this->patron['name']?></strong></div>
             <ul class="list-group list-group-flush">
@@ -15,27 +15,54 @@
             </ul>
         </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9">
         <?php if ($this->patron['blocked']): ?>
             <div class="alert alert-danger"><?=$this->translate("Your account was blocked. Contact library for further assistance.")?></div>
         <?php endif; ?>
         <?php if (count($this->patron['overdues']) > 0 ): ?>
             <div class="alert alert-warning"><?=$this->translate("You have some checkout overdue. You may or may not be able to checkout more items. It will depend on your library's policy.")?></div>
         <?php endif; ?>
+        <div>
+            <form>
+                <input type="hidden" name="library-card" value="<?=$this->patron['barcode']?>" />
+                <input type="hidden" name="action" value="checkout" />
+                <div class="form-row">
+                    <div class="col-sm-2">
+                        <label for="item-barcode"><?=$this->translate("Read item barcode/rfid:")?></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" name="item-barcode" id="item-barcode" />
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary"><?=$this->translate("Check out")?></button>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="action=renew-all" class="btn btn-success"><?=$this->translate("Renew all")?></a>
+                    </div>
+                </div>
+            </form>
+        </div>
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th><?=$this->translate("Title")?></th>
                     <th><?=$this->translate("Library")?></th>
-                    <th><?=$this->translate("Date checked out")?></th>
+                    <th><?=$this->translate("Barcode")?></th>
                     <th><?=$this->translate("Date due")?></th>
                     <th><?=$this->translate("Action")?></th>
                 <tr>
             </thead>
+            <tbody>
+                <?php foreach($this->patron['checkouts'] as $checkout): ?>
+                    <tr>
+                        <td><?=$checkout['title']?></td>
+                        <td><?=$checkout['checkout_location']?></td>
+                        <td><?=$checkout['barcode']?></td>
+                        <td><?=$checkout['due_date']?></td>
+                        <td><a class="btn btn-sm btn-primary" href=""><?=$this->translate("Renew")?></a></td>
+                    </tr>
+                 <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
-
 </div>
-<?php
-var_dump($this->patron);
-
