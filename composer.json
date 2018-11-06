@@ -2,6 +2,8 @@
     "name": "open-source-knihovna/open-source-self-check",
     "description": "Open source selfcheck reincarnated",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.1",
         "phpmailer/phpmailer": "^6.0",
@@ -26,7 +28,8 @@
         "ext-pdo_mysql": "*",
         "ext-zip": "*",
         "danmichaelo/ncip": "^0.2.3",
-        "ext-sockets": "*"
+        "ext-sockets": "*",
+        "xmorave2/sip2objects": "dev-master#22b799d"
     },
     "license": "GPL-3.0",
     "authors": [
