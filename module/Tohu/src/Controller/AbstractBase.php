@@ -30,7 +30,7 @@ class AbstractBase extends AbstractActionController
     {
         $classname = "\\Tohu\\ILS\\Driver\\" . $this->config['tohu']['driver'];
         $ils = new $classname();
-        $ils->init($this->config['driver']);
+        $ils->init($this->config[strtolower($this->config['tohu']['driver'])]);
         return $ils;
     }
 }
