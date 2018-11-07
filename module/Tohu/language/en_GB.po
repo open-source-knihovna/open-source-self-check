@@ -2,215 +2,203 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Josef Moravec <josef.moravec@gmail.com>, 2018
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-07 12:23+0100\n"
-"PO-Revision-Date: 2018-11-07 11:03+0000\n"
-"Last-Translator: Josef Moravec <josef.moravec@gmail.com>, 2018\n"
-"Language-Team: Czech (Czech Republic) (https://www.transifex.com/kohacz/teams/71162/cs_CZ/)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs_CZ\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: module/Tohu/view/tohu/index/index.phtml:2
 msgid "Welcome to"
-msgstr "Vítejte v"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:41
 msgid "Powered by"
-msgstr "Používáme "
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:4
 msgid "A 404 error occurred"
-msgstr "Chyba 404: stránka nebyla nalezena"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:10
 msgid "The requested controller was unable to dispatch the request."
-msgstr "Nepodařilo se rozpoznat požadavek."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:13
 msgid "The requested middleware was unable to dispatch the request."
-msgstr "Nepodařilo se rozpoznat požadavek"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:16
 msgid ""
-"The requested controller could not be mapped to an existing controller "
-"class."
-msgstr "Kontroler nemohl být namapován na existující třídu."
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:19
 msgid "The requested controller was not dispatchable."
-msgstr "Dotazovaný kontroler není použitelný."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:22
 msgid "The requested URL could not be matched by routing."
-msgstr "Nepodařilo se rozpoznat požadovanou URL adresu."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:25
 msgid "We cannot determine at this time why a 404 was generated."
-msgstr "Nepodařilo se určit původ chyby 404."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:34
 msgid "Controller"
-msgstr "Kontroler"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:51
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:9
 msgid "Additional information"
-msgstr "Další informace"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:54
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:78
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:12
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:36
 msgid "File"
-msgstr "Soubor"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:58
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:82
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:16
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:40
 msgid "Message"
-msgstr "Zpráva"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:62
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:86
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:20
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:44
 msgid "Stack trace"
-msgstr "Seznam volání"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:71
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:29
 msgid "Previous exceptions"
-msgstr "Předchozí výjimka"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:95
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:53
 msgid ""
-"There may be more exceptions, but we do not have enough memory to process "
-"it."
+"There may be more exceptions, but we do not have enough memory to process it."
 msgstr ""
-"Mohlo se vyskytnout i více výjimek, ale nebyl dostatek paměti pro jejich "
-"zpracování."
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:103
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:61
 msgid "No Exception available"
-msgstr "Výjimka není dostupná"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/index.phtml:1
 msgid "An error occurred"
-msgstr "Vyskytla se chyba"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:1
 msgid "Log out"
-msgstr "Odhlásit se"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:2
 msgid "Patron account for"
-msgstr "Účet čtenáře"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:8
 msgid "Library card"
-msgstr "Číslo průkazu"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:10
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:13
 msgid "Fines"
-msgstr "Poplatky"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:15
 msgid "Holds"
-msgstr "Rezervace"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:21
 msgid "Your account was blocked. Contact library for further assistance."
-msgstr "Váš účet byl zablokován. Pro více informací kontaktujte knihovnu."
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
 msgid ""
 "You have some checkout overdue. You may or may not be able to checkout more "
 "items. It will depend on your library's policy."
 msgstr ""
-"U některých vašich výpůjček byl překročen termín pro vrácení. Je možné, že "
-"si nebudete moci půjčovat další dokumenty."
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:32
 msgid "Read item barcode/rfid:"
-msgstr "Načtěte čárový kód/RFID:"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:38
 msgid "Check out"
-msgstr "Vypůjčit"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:41
 msgid "Renew all"
-msgstr "Prodloužit vše"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:49
 msgid "Title"
-msgstr "Název"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:50
 msgid "Library"
-msgstr "Oddělení"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:51
 msgid "Barcode"
-msgstr "Čárový kód"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:52
 msgid "Date due"
-msgstr "Termín vrácení"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:53
 msgid "Action"
-msgstr "Akce"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:63
 msgid "Renew"
-msgstr "Prodloužit"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:2
 msgid "Welcome to self check system"
-msgstr "Vítejte v systému samoobslužných výpůjček"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:9
 msgid "Enter your library card:"
-msgstr "Načtěte váš průkaz:"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:13
 msgid "Your library card number"
-msgstr "Číslo vašeho průkazu"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:15
 msgid "Submit"
-msgstr "Potvrdit"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:22
 msgid "Quick help"
-msgstr "Nápověda"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:24
 msgid ""
 "Use barcode scanner/RFID reader to insert identification number of your "
 "library card"
 msgstr ""
-"Použijte čtečku čárových kódů, nebo čipovou čtečku pro načtení vašeho "
-"průkazu do knihovny"
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:25
 msgid "Choose if you are going to check in or check out items"
@@ -218,7 +206,7 @@ msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:26
 msgid "Scan barcodes of processed item"
-msgstr "Načítejte čárové kódy dokumentů které chcete vrátit / vypůjčit"
+msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:27
 msgid "And so on"
