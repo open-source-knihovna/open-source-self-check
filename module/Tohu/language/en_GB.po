@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 12:23+0100\n"
+"POT-Creation-Date: 2018-11-07 16:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: module/Tohu/view/tohu/index/index.phtml:2
-msgid "Welcome to"
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:5
+msgid "Open source self check"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:41
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:46
 msgid "Powered by"
 msgstr ""
 
@@ -178,40 +178,48 @@ msgstr ""
 msgid "Welcome to self check system"
 msgstr ""
 
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:4
+msgid "On this self check station you can"
+msgstr ""
+
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:9
+msgid "Show information about your account"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:14
+msgid "Return your checkouts"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:19
+msgid "Check out materials from library"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
 msgid "Enter your library card:"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:13
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:35
 msgid "Your library card number"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:15
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:37
 msgid "Submit"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:22
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
 msgid "Quick help"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:24
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:46
 msgid ""
 "Use barcode scanner/RFID reader to insert identification number of your "
 "library card"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:25
-msgid "Choose if you are going to check in or check out items"
-msgstr ""
-
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:26
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:47
 msgid "Scan barcodes of processed item"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:27
-msgid "And so on"
-msgstr ""
-
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:28
-msgid "and so on"
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:48
+msgid "Click (or tap) on Log out button to end work"
 msgstr ""

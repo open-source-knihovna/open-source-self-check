@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 12:23+0100\n"
+"POT-Creation-Date: 2018-11-07 15:57+0100\n"
 "PO-Revision-Date: 2018-11-07 11:03+0000\n"
 "Last-Translator: Josef Moravec <josef.moravec@gmail.com>, 2018\n"
 "Language-Team: Czech (Czech Republic) (https://www.transifex.com/kohacz/teams/71162/cs_CZ/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: cs_CZ\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: module/Tohu/view/tohu/index/index.phtml:2
-msgid "Welcome to"
-msgstr "Vítejte v"
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:5
+msgid "Open source self check"
+msgstr "Samoobslužný výpůjční pult s otevřeným zdrojovým kódem"
 
-#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:41
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:46
 msgid "Powered by"
 msgstr "Používáme "
 
@@ -188,23 +188,39 @@ msgstr "Prodloužit"
 msgid "Welcome to self check system"
 msgstr "Vítejte v systému samoobslužných výpůjček"
 
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:4
+msgid "On this self check station you can"
+msgstr "Na této samoobslužné stanici můžete"
+
 #: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:9
+msgid "Show information about your account"
+msgstr "Nechat si zobrazit informace o vašem účtu v knihovně"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:14
+msgid "Return your checkouts"
+msgstr "Vracet výpůjčky"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:19
+msgid "Check out materials from library"
+msgstr "Půjčovat si dokumenty z knihovny"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
 msgid "Enter your library card:"
 msgstr "Načtěte váš průkaz:"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:13
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:35
 msgid "Your library card number"
 msgstr "Číslo vašeho průkazu"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:15
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:37
 msgid "Submit"
 msgstr "Potvrdit"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:22
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
 msgid "Quick help"
 msgstr "Nápověda"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:24
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:46
 msgid ""
 "Use barcode scanner/RFID reader to insert identification number of your "
 "library card"
@@ -212,18 +228,10 @@ msgstr ""
 "Použijte čtečku čárových kódů, nebo čipovou čtečku pro načtení vašeho "
 "průkazu do knihovny"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:25
-msgid "Choose if you are going to check in or check out items"
-msgstr ""
-
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:26
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:47
 msgid "Scan barcodes of processed item"
 msgstr "Načítejte čárové kódy dokumentů které chcete vrátit / vypůjčit"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:27
-msgid "And so on"
-msgstr ""
-
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:28
-msgid "and so on"
-msgstr ""
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:48
+msgid "Click (or tap) on Log out button to end work"
+msgstr "Klikněte (nebo ťukněte) na tlačítko Odhlásit se pro ukončení práce"
