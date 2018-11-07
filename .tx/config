@@ -1,10 +1,10 @@
 [main]
 host = https://www.transifex.com
 
-
-[tohu.en_enpo]
-source_file = module/Tohu/language/en_EN.po
-source_lang = en
-type = PO
+[tohu.en-en-po]
 file_filter = module/Tohu/language/<lang>.po
-trans.fi = translations/cs_CZ.po
+minimum_perc = 0
+source_file = module/Tohu/language/en_GB.po
+source_lang = en_GB
+type = PO
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-langs="cs_CZ en_EN"
+langs="en_GB cs_CZ"
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 cd $dir/..
