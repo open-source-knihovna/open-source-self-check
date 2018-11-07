@@ -19,6 +19,9 @@ return [
 
         // Logo - url or filename
         "logo" => "__LOGO__",
+
+        // Language - en_GB, cs_CZ
+        "language" => "cs_CZ",
     ],
 ];
 

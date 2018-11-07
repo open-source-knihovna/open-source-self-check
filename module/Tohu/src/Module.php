@@ -22,5 +22,11 @@ class Module
         $viewModel = $app->getMvcEvent()->getViewModel();
         $viewModel->config = $config["tohu"];
         $viewModel->driver = $config[strtolower($config["tohu"]["driver"])];
+        $locale = $config["tohu"]["language"] ?? "";
+        if (!empty($locale)) {
+            $sm = $app->getServiceManager();
+            $translator = $sm->get('Zend\I18n\Translator\TranslatorInterface');
+            $translator->setLocale($locale);
+        }
     }
 }
