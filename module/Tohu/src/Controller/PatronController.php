@@ -23,9 +23,9 @@ class PatronController extends AbstractBase
         $action_result = null;
         $error = null;
         if ($action == "checkout") {
-            $action_result = $this->processCheckout($patronBarcode, $itemBarcode);
+            $action_result = $driver->checkout($patronBarcode, $itemBarcode);
         } elseif ($action == "checkin") {
-            $action_result = $this->processCheckin($patronBarcode, $itemBarcode);
+            $action_result = $driver->checkin($patronBarcode, $itemBarcode);
         } else {
             $error = "Invalid action"; //FIXME This is untranslatable
         }
@@ -36,16 +36,5 @@ class PatronController extends AbstractBase
             'error' => $error,
             'result' => $action_result,
         ]);
-    }
-
-    protected function processCheckin()
-    {
-        return true;
-    }
-
-
-    protected function processCheckout()
-    {
-        return true;
     }
 }

@@ -17,6 +17,7 @@
         </div>
     </div>
     <div class="col-sm-9">
+        <?php var_dump($result); ?>
         <?php if ($this->patron['blocked']): ?>
             <div class="alert alert-danger"><?=$this->translate("Your account was blocked. Contact library for further assistance.")?></div>
         <?php endif; ?>
