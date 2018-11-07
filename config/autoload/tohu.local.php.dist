@@ -10,6 +10,13 @@ return [
         // Self-check name
         "selfcheckName" => "__SELFCHECK_NAME__",
 
+        // Self-check mode, could be info, checkin, checkout, all
+        // info - just shows the patron's account
+        // checkin - enable checking-in + info
+        // checkout - enable checking out + info
+        // all - all above
+        "mode" => "__SELFCHECK_MODE__",
+
         // Logo - url or filename
         "logo" => "__LOGO__",
     ],

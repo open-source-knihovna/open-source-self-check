@@ -92,6 +92,29 @@ elif [ "$driver" == "4" ]; then
     configure_demo
 fi
 
+echo
+echo "In which mode should this selfcheck operate?"
+echo "Possible options are:"
+echo "1. Info - shows only the patron's account information"
+echo "2. Checkin - enable checking-in + shows patron's account informarion"
+echo "3. Checkout - enable checking out + shows patron's account informarion"
+echo "4. All"
+
+while [[ ! $mode =~ ^[1-4]{1}$ ]]; do
+    read -e -p "Enter your choice: " mode
+done
+
+if [ "$mode" == "1" ]; then
+    mode="info"
+elif [ "$mode" == "2" ]; then
+    mode="checkin"
+elif [ "$mode" == "3" ]; then
+    mode="checkout"
+elif [ "$mode" == "4" ]; then
+    mode="all"
+fi
+sed -i "s#__SELFCHECK_MODE__#$mode#g" $mainconfig
+
 echo "Configuration finished"
 echo
 echo "If you want do adjust the configuration later, you could edit these files:"
