@@ -3,18 +3,14 @@
     <?php $mode = $this->mode; ?>
     <p><?=$this->translate("On this self check station you can")?>: 
     <ul>
-    <?php
-        if (in_array($mode, ["info","checkin","checkout","all"])) {
-    ?>
         <li><?=$this->translate("Show information about your account")?></li>
     <?php
-        }
-        if (in_array($mode, ["checkin","all"])) {
+        if ($mode["checkin"]) {
     ?>
         <li><?=$this->translate("Return your checkouts")?></li>
     <?php
         }
-        if (in_array($mode, ["checkout","all"])) {
+        if ($mode["checkout"]) {
     ?>
         <li><?=$this->translate("Check out materials from library")?></li>
     <?php
@@ -30,7 +26,7 @@
             <div class="card-body">
                 <h3 class="card-title"><label for="library-card"><?=$this->translate("Enter your library card:")?></label></h3>
                 <p class="card-text">
-                    <form id="" class="form-inline" action="/patron/info">
+                    <form id="" class="form-inline" action="/patron/info" method="POST">
                         <div class="form-group">
                             <input id="library-card" name="library-card" class="form-control" type="text"  placeholder="<?=$this->translate("Your library card number")?>"/>
                         </div>
