@@ -12,6 +12,6 @@ class IndexController extends AbstractBase
 {
     public function indexAction()
     {
-        return new ViewModel();
+        return new ViewModel([ "mode" => $this->config["tohu"]["mode"] ]);
     }
 }

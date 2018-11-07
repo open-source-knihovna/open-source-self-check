@@ -1,5 +1,27 @@
 <div class="jumbotron">
     <h2><?=$this->translate("Welcome to self check system")?></h2>
+    <?php $mode = $this->mode; ?>
+    <p><?=$this->translate("On this self check station you can")?>: 
+    <ul>
+    <?php
+        if (in_array($mode, ["info","checkin","checkout","all"])) {
+    ?>
+        <li><?=$this->translate("Show information about your account")?></li>
+    <?php
+        }
+        if (in_array($mode, ["checkin","all"])) {
+    ?>
+        <li><?=$this->translate("Return your checkouts")?></li>
+    <?php
+        }
+        if (in_array($mode, ["checkout","all"])) {
+    ?>
+        <li><?=$this->translate("Check out materials from library")?></li>
+    <?php
+        }
+    ?>
+    </ul>
+    </p>
 </div>
 
 <div class="row justify-content-center">
