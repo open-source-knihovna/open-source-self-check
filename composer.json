@@ -29,7 +29,7 @@
         "ext-zip": "*",
         "danmichaelo/ncip": "^0.2.3",
         "ext-sockets": "*",
-        "xmorave2/sip2objects": "dev-master#22b799d"
+        "xmorave2/sip2objects": "dev-master"
     },
     "license": "GPL-3.0",
     "authors": [

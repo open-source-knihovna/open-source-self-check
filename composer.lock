@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd02b91ecfc4eb2ffbb1adead9ab2a0b",
+    "content-hash": "adeed49afc2c7813c0658b2da12af565",
     "packages": [
         {
             "name": "cap60552/php-sip2",
@@ -463,12 +463,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/xmorave2/Sip2Objects.git",
-                "reference": "22b799d"
+                "reference": "31bc722ef4ac7434059b65f0338c22b95882d355"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xmorave2/Sip2Objects/zipball/22b799d",
-                "reference": "22b799d",
+                "url": "https://api.github.com/repos/xmorave2/Sip2Objects/zipball/31bc722ef4ac7434059b65f0338c22b95882d355",
+                "reference": "31bc722ef4ac7434059b65f0338c22b95882d355",
                 "shasum": ""
             },
             "require": {
@@ -492,7 +492,7 @@
                 }
             ],
             "description": "PHP library to ease using php-sip2",
-            "time": "2018-02-09T11:07:33+00:00"
+            "time": "2018-11-08T07:23:18+00:00"
         },
         {
             "name": "zendframework/zend-code",
