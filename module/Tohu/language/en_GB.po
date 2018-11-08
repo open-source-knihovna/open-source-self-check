@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 16:07+0100\n"
+"POT-Creation-Date: 2018-11-08 09:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,49 +128,74 @@ msgstr ""
 msgid "Holds"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:21
-msgid "Your account was blocked. Contact library for further assistance."
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:22
+msgid "Document with this title was checked in"
 msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
+msgid "Document with this title was NOT checked in"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:31
+msgid "Please contant library staff"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:29
+msgid "Document with this title was checked out"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:31
+msgid "Document with this title was NOT checked out"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:35
+msgid "Your account was blocked. Contact library for further assistance."
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:38
 msgid ""
 "You have some checkout overdue. You may or may not be able to checkout more "
 "items. It will depend on your library's policy."
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:32
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:49
 msgid "Read item barcode/rfid:"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:38
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:55
 msgid "Check out"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:41
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:55
+msgid "Check in"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:59
 msgid "Renew all"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:49
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:69
 msgid "Title"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:50
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:70
 msgid "Library"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:51
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:71
 msgid "Barcode"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:52
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:72
 msgid "Date due"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:53
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:73
 msgid "Action"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:63
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:83
 msgid "Renew"
 msgstr ""
 
@@ -182,44 +207,44 @@ msgstr ""
 msgid "On this self check station you can"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:9
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:6
 msgid "Show information about your account"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:14
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:10
 msgid "Return your checkouts"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:19
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:15
 msgid "Check out materials from library"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:27
 msgid "Enter your library card:"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:35
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
 msgid "Your library card number"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:37
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:33
 msgid "Submit"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:40
 msgid "Quick help"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:46
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:42
 msgid ""
 "Use barcode scanner/RFID reader to insert identification number of your "
 "library card"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:47
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:43
 msgid "Scan barcodes of processed item"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:48
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
 msgid "Click (or tap) on Log out button to end work"
 msgstr ""

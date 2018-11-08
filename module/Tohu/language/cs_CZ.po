@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 15:57+0100\n"
+"POT-Creation-Date: 2018-11-08 09:21+0100\n"
 "PO-Revision-Date: 2018-11-07 11:03+0000\n"
 "Last-Translator: Josef Moravec <josef.moravec@gmail.com>, 2018\n"
 "Language-Team: Czech (Czech Republic) (https://www.transifex.com/kohacz/teams/71162/cs_CZ/)\n"
@@ -136,11 +136,32 @@ msgstr "Poplatky"
 msgid "Holds"
 msgstr "Rezervace"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:21
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:22
+msgid "Document with this title was checked in"
+msgstr "Tento dokumenty byl vrácen"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
+msgid "Document with this title was NOT checked in"
+msgstr "Tento dokument se NEpodařilo vrátit"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:31
+msgid "Please contant library staff"
+msgstr "Prosíme, kontaktujte pracovníky knihovny"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:29
+msgid "Document with this title was checked out"
+msgstr "Tento dokument byl vypůjčen"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:31
+msgid "Document with this title was NOT checked out"
+msgstr "Tento dokument se NEpodařilo vypůjčit"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:35
 msgid "Your account was blocked. Contact library for further assistance."
 msgstr "Váš účet byl zablokován. Pro více informací kontaktujte knihovnu."
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:24
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:38
 msgid ""
 "You have some checkout overdue. You may or may not be able to checkout more "
 "items. It will depend on your library's policy."
@@ -148,39 +169,43 @@ msgstr ""
 "U některých vašich výpůjček byl překročen termín pro vrácení. Je možné, že "
 "si nebudete moci půjčovat další dokumenty."
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:32
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:49
 msgid "Read item barcode/rfid:"
 msgstr "Načtěte čárový kód/RFID:"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:38
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:55
 msgid "Check out"
 msgstr "Vypůjčit"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:41
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:55
+msgid "Check in"
+msgstr "Vrátit"
+
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:59
 msgid "Renew all"
 msgstr "Prodloužit vše"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:49
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:69
 msgid "Title"
 msgstr "Název"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:50
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:70
 msgid "Library"
 msgstr "Oddělení"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:51
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:71
 msgid "Barcode"
 msgstr "Čárový kód"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:52
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:72
 msgid "Date due"
 msgstr "Termín vrácení"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:53
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:73
 msgid "Action"
 msgstr "Akce"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:63
+#: /home/josefm/tohu/module/Tohu/view/tohu/patron/info.phtml:83
 msgid "Renew"
 msgstr "Prodloužit"
 
@@ -192,35 +217,35 @@ msgstr "Vítejte v systému samoobslužných výpůjček"
 msgid "On this self check station you can"
 msgstr "Na této samoobslužné stanici můžete"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:9
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:6
 msgid "Show information about your account"
 msgstr "Nechat si zobrazit informace o vašem účtu v knihovně"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:14
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:10
 msgid "Return your checkouts"
 msgstr "Vracet výpůjčky"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:19
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:15
 msgid "Check out materials from library"
 msgstr "Půjčovat si dokumenty z knihovny"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:27
 msgid "Enter your library card:"
 msgstr "Načtěte váš průkaz:"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:35
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:31
 msgid "Your library card number"
 msgstr "Číslo vašeho průkazu"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:37
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:33
 msgid "Submit"
 msgstr "Potvrdit"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:40
 msgid "Quick help"
 msgstr "Nápověda"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:46
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:42
 msgid ""
 "Use barcode scanner/RFID reader to insert identification number of your "
 "library card"
@@ -228,10 +253,10 @@ msgstr ""
 "Použijte čtečku čárových kódů, nebo čipovou čtečku pro načtení vašeho "
 "průkazu do knihovny"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:47
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:43
 msgid "Scan barcodes of processed item"
 msgstr "Načítejte čárové kódy dokumentů které chcete vrátit / vypůjčit"
 
-#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:48
+#: /home/josefm/tohu/module/Tohu/view/tohu/index/index.phtml:44
 msgid "Click (or tap) on Log out button to end work"
 msgstr "Klikněte (nebo ťukněte) na tlačítko Odhlásit se pro ukončení práce"
