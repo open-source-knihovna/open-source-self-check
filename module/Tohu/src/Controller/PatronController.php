@@ -20,15 +20,17 @@ class PatronController extends AbstractBase
         $itemBarcode = $this->params()->fromPost('item-barcode');
         $patron = $driver->getPatron($patronBarcode);
 
-        $action_result = null;
+        $action_result = [];
         $error = null;
         if ($action == "checkout") {
-            $action_result = $driver->checkout($patronBarcode, $itemBarcode);
+            $action_result['checkout'] = $driver->checkout($patronBarcode, $itemBarcode);
         } elseif ($action == "checkin") {
-            $action_result = $driver->checkin($patronBarcode, $itemBarcode);
+            $action_result['checkin'] = $driver->checkin($patronBarcode, $itemBarcode);
         } else {
             $error = "Invalid action"; //FIXME This is untranslatable
         }
+
+        $patron = $driver->getPatron($patronBarcode);
 
         return new ViewModel([
             'patron' => $patron,

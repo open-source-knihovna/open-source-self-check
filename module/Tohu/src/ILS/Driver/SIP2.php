@@ -66,7 +66,7 @@ class SIP2 extends AbstractDriver
     {
         $return = [];
 
-        $this->connect($patron);
+        //$this->connect($patron);
 
         $checkoutResponse = $this->connection->msgCheckout($barcode, $this->config->location);
         $checkout = $this->connection->parseCheckoutResponse($this->connection->get_message($checkoutResponse));
@@ -87,15 +87,11 @@ class SIP2 extends AbstractDriver
 
     public function checkin($patron, $barcode)
     {
-        $this->connect($patron);
-
-        $checkinResponse = $this->connection->msgCheckin($barcode, '');
-        $checkin = $this->connection->parseCheckinResponse($this->connection->get_message($checkinResponse));
-        $item = $this->getItemInfo($barcode);
-        $this->connection->msgEndPatronSession();
+        $checkin = $this->connection->doCheckin($barcode);
+        $status = isset($checkin->variable['AA'][0]) && $checkin->fixed['Ok'] === "1"  && $checkin->fixed['Alert'] ==="N";
         return [
-            'item' => $item,
-            'status' => $checkin['fixed']['Ok'] === "Y" ? true : false,
+            'title' => $checkin->variable['AJ'][0],
+            'status' => $status,
         ];
     }
 
