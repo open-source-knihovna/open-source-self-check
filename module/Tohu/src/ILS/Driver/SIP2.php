@@ -8,7 +8,7 @@ namespace Tohu\ILS\Driver;
 
 use \sip2 as Sip2Connector;
 use \SIP2\Connection as sip2connection;
-use \Tohu\ILS\Driver\Exception\ConnectionException;
+use \Tohu\ILS\Driver\Exception\ConfigException;
 
 class SIP2 extends AbstractDriver
 {
@@ -16,6 +16,12 @@ class SIP2 extends AbstractDriver
      * @var SIP2 connection
      */
     protected $connection;
+
+
+    /*
+     * @var library code
+     */
+    protected $library;
 
     /*
      * @var Date format for display
@@ -25,6 +31,7 @@ class SIP2 extends AbstractDriver
     public function init(array $ilsConfig = [])
     {
         $this->date_format = "j. n. Y";
+        $this->library = $ilsConfig["library"] ?? null;
         $this->connection = new sip2connection(
             $ilsConfig["server"] ?? null,
             $ilsConfig["port"] ?? null,
@@ -62,27 +69,21 @@ class SIP2 extends AbstractDriver
         ];
     }
 
-    public function checkout($patron, $barcode)
+    public function checkout($patron, $barcode, $location = null)
     {
-        $return = [];
+        $library = $location ?? $this->library;
+        if ($library === null) {
+            throw new ConfigException("Can't do checkout without library set");
+        }
 
-        //$this->connect($patron);
-
-        $checkoutResponse = $this->connection->msgCheckout($barcode, $this->config->location);
-        $checkout = $this->connection->parseCheckoutResponse($this->connection->get_message($checkoutResponse));
-        $item = $this->connection->msgItemInformation($barcode);
-        $return["status"] = $checkout['fixed']['Ok'] ?? false;
-        /* TODO: use getItemInfo method */
-        $return["item"] = [
-            "type" => $item['variable']['CR'][0] ?? null,
-            "callnumber" => $item['variable']['CS'][0] ?? null,
-            "location" => $item['variable']['AQ'][0] ?? null,
-            "title" => $checkout['variable']['AJ'][0] ?? null,
+        $checkout = $this->connection->doCheckout($barcode, $library);
+        $item = $this->connection->getItemInfo($barcode);
+        return [
+            'title' => $item->variable['AJ'][0],
+            'dueDate' => !empty($checkout->variable['AH']) ? $this->dateFromSip($checkout->variable['AH'][0]) : null,
+            'status' => $checkout->fixed['Ok'] == "1",
+            'raw' => $checkout,
         ];
-        $return["patron"] = $this->getCurrentPatronInfo();
-        $return["dueDate"] = $checkout['variable']['AH'][0] ?? null;
-        $this->connection->msgEndPatronSession();
-        return $return;
     }
 
     public function checkin($patron, $barcode)

@@ -23,8 +23,14 @@ function configure_sip {
     cp "$sip2config.dist" $sip2config
     read -e -p "Enter URL or IP address of your SIP2 server: " server
     read -e -p "Enter port: " port
+    read -e -p "Enter login name: " login
+    read -e -p "Enter password: " password
+    read -e -p "Enter library code (optional, only needed when using checkout mode): " library
     sed -i "s#__SIP_SERVER__#$server#" $sip2config
     sed -i "s#__SIP_PORT__#$port#" $sip2config
+    sed -i "s#__SIP_LOGIN__#$login#" $sip2config
+    sed -i "s#__SIP_PASSWORD__#$password#" $sip2config
+    sed -i "s#__SIP_LIBRARY__#$library#" $sip2config
     driverconfig=$sip2config
 }
 
