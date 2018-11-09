@@ -5,14 +5,14 @@
         <div class="card">
             <div class="card-header"><strong><?=$this->patron['name']?></strong></div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-id-card-o"></i> <?=$this->translate("Library card")?>: <strong><?=$this->patron['barcode']?></strong></li>
+                <li class="list-group-item"><i class="far fa-id-card"></i> <?=$this->translate("Library card")?>: <strong><?=$this->patron['barcode']?></strong></li>
                 <?php if (isset($this->patron['email'])): ?>
-                    <li class="list-group-item"><i class="fa fa-envelope-o"></i> <?=$this->translate("E-mail")?>: <strong><?=$this->patron['email']?></strong></li>
+                    <li class="list-group-item"><i class="far fa-envelope"></i> <?=$this->translate("E-mail")?>: <strong><?=$this->patron['email']?></strong></li>
                 <?php endif; ?>
                 <?php if (isset($this->patron['fines'])): ?>
-                    <li class="list-group-item"><i class="fa fa-money"></i> <?=$this->translate("Fines")?>: <span class="badge badge-danger"><strong><?=$this->patron['fines']?></strong></span></li>
+                    <li class="list-group-item"><i class="far fa-money-bill-alt"></i> <?=$this->translate("Fines")?>: <span class="badge badge-danger"><strong><?=$this->patron['fines']?></strong></span></li>
                 <?php endif; ?>
-                <li class="list-group-item"><i class="fa fa-chain"></i> <?=$this->translate("Holds")?>: <span class="badge badge-info"><strong><?=$this->patron['holds'] ?? 0 ?></strong></span></li>
+                <li class="list-group-item"><i class="fas fa-link"></i> <?=$this->translate("Holds")?>: <span class="badge badge-info"><strong><?=$this->patron['holds'] ?? 0 ?></strong></span></li>
             </ul>
         </div>
     </div>
