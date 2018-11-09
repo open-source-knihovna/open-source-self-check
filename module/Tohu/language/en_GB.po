@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 09:23+0100\n"
+"POT-Creation-Date: 2018-11-09 11:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,16 @@ msgstr ""
 msgid "Open source self check"
 msgstr ""
 
-#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:46
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:47
 msgid "Powered by"
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:54
+msgid "Wait please..."
+msgstr ""
+
+#: /home/josefm/tohu/module/Tohu/view/layout/layout.phtml:57
+msgid "Your request was sent. Please wait for the response."
 msgstr ""
 
 #: /home/josefm/tohu/module/Tohu/view/error/404.phtml:4
