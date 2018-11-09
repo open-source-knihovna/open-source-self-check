@@ -18,6 +18,7 @@
 
         <!-- Scripts -->
         <?= $this->headScript()
+            ->prependFile($this->basePath('js/wait.js'))
             ->prependFile($this->basePath('js/bootstrap.min.js'))
             ->prependFile($this->basePath('js/jquery.min.js'))
         ?>
@@ -45,6 +46,18 @@
             <footer>
                 <p>&copy; 2017-2018 opensource.knihovna.cz. <?=$this->translate("Powered by")?> <a href="https://open-self-check.org">Tohu</a></p>
             </footer>
+        </div>
+        <div id="waitModal" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5><?=$this->translate("Wait please...")?></h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><?=$this->translate("Your request was sent. Please wait for the response.");?></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <?= $this->inlineScript() ?>
     </body>
