@@ -6,7 +6,7 @@
 
 namespace Tohu\Controller;
 
-use Zend\View\Model\ViewModel;
+use Laminas\View\Model\ViewModel;
 use Tohu\Controller\AbstractBase;
 use Tohu\ILS\DriverInterface;
 

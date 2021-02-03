@@ -25,7 +25,7 @@ class Module
         $locale = $config["tohu"]["language"] ?? "";
         if (!empty($locale)) {
             $sm = $app->getServiceManager();
-            $translator = $sm->get('Zend\I18n\Translator\TranslatorInterface');
+            $translator = $sm->get('Laminas\I18n\Translator\TranslatorInterface');
             $translator->setLocale($locale);
         }
     }

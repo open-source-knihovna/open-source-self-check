@@ -3,8 +3,8 @@ namespace Tohu\Factory;
 
 use Tohu\Controller\IndexController;
 use Interop\Container\ContainerInterface;
-use Zend\Config\Config;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\Config\Config;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class IndexControllerFactory implements FactoryInterface
 {

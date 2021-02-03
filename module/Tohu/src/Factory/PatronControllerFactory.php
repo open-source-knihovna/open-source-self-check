@@ -3,7 +3,7 @@ namespace Tohu\Factory;
 
 use Tohu\Controller\PatronController;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class PatronControllerFactory implements FactoryInterface
 {

@@ -6,9 +6,9 @@
 
 namespace Tohu;
 
-use Zend\Router\Http\Literal;
-use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\Router\Http\Literal;
+use Laminas\Router\Http\Segment;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
@@ -47,7 +47,7 @@ return [
     ],
     'service_manager' => array(
         'factories' => [
-            \Zend\I18n\Translator\TranslatorInterface::class => \Zend\I18n\Translator\TranslatorServiceFactory::class,
+            \Laminas\I18n\Translator\TranslatorInterface::class => \Laminas\I18n\Translator\TranslatorServiceFactory::class,
         ],
     ),
    'translator' => array(
@@ -83,7 +83,7 @@ return [
     ],
     'view_helpers' => [
         'invokables' => [
-            'translate' => \Zend\I18n\View\Helper\Translate::class
+            'translate' => \Laminas\I18n\View\Helper\Translate::class
         ]
     ],
 ];

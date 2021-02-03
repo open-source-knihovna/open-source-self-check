@@ -5,7 +5,7 @@
 
 namespace Tohu\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 class AbstractBase extends AbstractActionController
 {
