@@ -18,7 +18,6 @@ class PatronController extends AbstractBase
         $patronBarcode = $this->params()->fromPost('library-card');
         $action = $this->params()->fromPost('action');
         $itemBarcode = $this->params()->fromPost('item-barcode');
-        $patron = $driver->getPatron($patronBarcode);
 
         $action_result = [];
         $error = null;
