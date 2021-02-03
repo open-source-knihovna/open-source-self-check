@@ -21,14 +21,14 @@ class SIP2 extends AbstractDriver
     /*
      * @var library code
      */
-    protected $library;
+    protected string $library;
 
     /*
      * @var Date format for display
      */
-    protected $date_format;
+    protected string $date_format;
 
-    public function init(array $ilsConfig = [])
+    public function init(array $ilsConfig = []): void
     {
         $this->date_format = "j. n. Y";
         $this->library = $ilsConfig["library"] ?? null;
@@ -40,7 +40,7 @@ class SIP2 extends AbstractDriver
         );
     }
 
-    public function getPatron($patronBarcode)
+    public function getPatron(string $patronBarcode): array
     {
         $patron = $this->connection->getPatronInfo($patronBarcode, true);
         $checkouts = [];
@@ -68,10 +68,10 @@ class SIP2 extends AbstractDriver
         ];
     }
 
-    public function checkout($patron, $barcode, $location = null)
+    public function checkout(string $patron, string $barcode, string $location = ''): array
     {
-        $library = $location ?? $this->library;
-        if ($library === null) {
+        $library = empty($location) ?? $this->library;
+        if (empty($library)) {
             throw new ConfigException("Can't do checkout without library set");
         }
 
@@ -85,7 +85,7 @@ class SIP2 extends AbstractDriver
         ];
     }
 
-    public function checkin($patron, $barcode)
+    public function checkin(string $patron, string $barcode): array
     {
         $checkin = $this->connection->doCheckin($barcode);
         $status = isset($checkin->variable['AA'][0]) && $checkin->fixed['Ok'] === "1"  && $checkin->fixed['Alert'] ==="N";
@@ -95,13 +95,13 @@ class SIP2 extends AbstractDriver
         ];
     }
 
-    protected function dateFromSip($sip_date)
+    protected function dateFromSip(string $sip_date): string
     {
         $date = \DateTime::createFromFormat("Ymd", substr($sip_date, 0, 8));
         return $date->format($this->date_format);
     }
 
-    protected function getCirculationStatus($status_number)
+    protected function getCirculationStatus(int $status_number): string
     {
         switch ($status_number) {
             case 1: return "other";

@@ -12,22 +12,22 @@ use \Tohu\ILS\Driver\Exception\MethodNotImplementedException;
 
 abstract class AbstractDriver implements DriverInterface
 {
-    public function init(array $config = [])
+    public function init(array $config = []): void
     {
         throw new MethodNotImplementedException("Method init not implemented");
     }
 
-    public function checkout($patron, $itemBarcode)
+    public function checkout(string $patron, string $itemBarcode, string $location = ''): array
     {
         throw new MethodNotImplementedException("Method checkout not implemented");
     }
 
-    public function checkin($patron, $itemBarcode)
+    public function checkin(string $patron, string $itemBarcode): array
     {
         throw new MethodNotImplementedException("Method checkin not implemented");
     }
 
-    public function getPatron($patronBarcode)
+    public function getPatron(string $patronBarcode): array
     {
         throw new MethodNotImplementedException("Method getPatron not implemented");
     }

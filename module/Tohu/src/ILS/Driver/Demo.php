@@ -10,12 +10,11 @@ namespace Tohu\ILS\Driver;
 
 class Demo extends AbstractDriver
 {
-    public function init(array $config = [])
+    public function init(array $config = []): void
     {
-        return;
     }
 
-    public function checkout($patron, $itemBarcode)
+    public function checkout(string $patron, string $itemBarcode, string $location = ''): array
     {
         return [
             'status' => true,
@@ -31,7 +30,7 @@ class Demo extends AbstractDriver
         ];
     }
 
-    public function checkin($patron, $itemBarcode)
+    public function checkin(string $patron, string $itemBarcode): array
     {
         return [
             'item' => [
@@ -45,7 +44,7 @@ class Demo extends AbstractDriver
         ];
     }
 
-    public function getPatron($patronBarcode)
+    public function getPatron(string $patronBarcode): array
     {
         $checkouts = [
             [

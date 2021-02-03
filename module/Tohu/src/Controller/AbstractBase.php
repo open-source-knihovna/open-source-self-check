@@ -39,7 +39,10 @@ class AbstractBase extends AbstractActionController
         return $ils;
     }
 
-    protected function parseMode()
+    /**
+     * @return array
+     */
+    protected function parseMode(): array
     {
         $mode = $this->config['tohu']['mode'];
         return [

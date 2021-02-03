@@ -8,16 +8,18 @@ declare(strict_types=1);
 
 namespace Tohu;
 
+use Laminas\Mvc\MvcEvent;
+
 class Module
 {
     const VERSION = '0.1dev';
 
-    public function getConfig()
+    public function getConfig(): array
     {
         return include __DIR__ . '/../config/module.config.php';
     }
 
-    public function onBootstrap($event)
+    public function onBootstrap(MvcEvent $event): void
     {
         $app = $event->getParam('application');
         $config = $app->getConfig();

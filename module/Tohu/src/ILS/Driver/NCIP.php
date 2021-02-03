@@ -13,18 +13,18 @@ use Scriptotek\Ncip\NcipClient;
 
 class NCIP extends AbstractDriver
 {
-    protected $ncipUrl;
+    protected ?string $ncipUrl;
 
-    protected $userAgent = "Tohu version " . \Tohu\Module::VERSION;
+    protected string $userAgent = "Tohu version " . \Tohu\Module::VERSION;
 
-    protected $agencyId;
+    protected ?string $agencyId;
 
     /**
      * @var \Scriptotek\Ncip\NcipClient
      */
     protected $ncip;
 
-    public function init($config = [])
+    public function init(array $config = []): void
     {
         $this->ncipUrl = $config["ils"]["server"] ?? null;
         $this->agencyId = $config["ils"]["agencyId"] ?? null;

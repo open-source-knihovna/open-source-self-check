@@ -14,6 +14,11 @@ use Tohu\ILS\DriverInterface;
 
 class PatronController extends AbstractBase
 {
+    /**
+     * Patron info action
+     *
+     * @return ViewModel
+     */
     public function infoAction()
     {
         $driver = $this->getILS();
