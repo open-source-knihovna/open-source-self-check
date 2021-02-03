@@ -8,8 +8,7 @@ declare(strict_types=1);
 
 namespace Tohu\ILS\Driver;
 
-use \sip2 as Sip2Connector;
-use \SIP2\Connection as sip2connection;
+use \SIP2\Connection as Sip2connection;
 use \Tohu\ILS\Driver\Exception\ConfigException;
 
 class SIP2 extends AbstractDriver
@@ -17,8 +16,7 @@ class SIP2 extends AbstractDriver
     /*
      * @var SIP2 connection
      */
-    protected $connection;
-
+    protected Sip2connection $connection;
 
     /*
      * @var library code
@@ -34,7 +32,7 @@ class SIP2 extends AbstractDriver
     {
         $this->date_format = "j. n. Y";
         $this->library = $ilsConfig["library"] ?? null;
-        $this->connection = new sip2connection(
+        $this->connection = new Sip2connection(
             $ilsConfig["server"] ?? null,
             $ilsConfig["port"] ?? null,
             $ilsConfig["login"] ?? '',

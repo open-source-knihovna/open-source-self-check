@@ -11,8 +11,6 @@ namespace Tohu\ILS\Driver;
 use Scriptotek\Ncip\NcipConnector;
 use Scriptotek\Ncip\NcipClient;
 
-
-
 class NCIP extends AbstractDriver
 {
     protected $ncipUrl;
@@ -22,7 +20,7 @@ class NCIP extends AbstractDriver
     protected $agencyId;
 
     /**
-     * @var Scriptotek\Ncip\NcipClient
+     * @var \Scriptotek\Ncip\NcipClient
      */
     protected $ncip;
 

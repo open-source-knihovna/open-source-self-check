@@ -11,16 +11,16 @@ use Laminas\Mvc\Controller\AbstractActionController;
 
 class AbstractBase extends AbstractActionController
 {
-    protected $config;
+    protected array $config;
 
     protected array $mode;
 
     /**
      * Constructor
      *
-     * @param ServiceLocatorInterface $sm Service locator
+     * @param array $config Configuration
      */
-    public function __construct($config)
+    public function __construct(array $config)
     {
         $this->config = $config;
         $this->mode = $this->parseMode();
@@ -29,7 +29,7 @@ class AbstractBase extends AbstractActionController
     /**
      * Get the ILS connection.
      *
-     * @return \Tohu\ILS\DriverInterface
+     * @return \Tohu\ILS\Driver\DriverInterface
      */
     public function getILS()
     {

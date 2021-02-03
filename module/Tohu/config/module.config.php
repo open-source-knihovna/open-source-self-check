@@ -61,8 +61,8 @@ return [
     ),
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => Factory\IndexControllerFactory::class,
-            Controller\PatronController::class => Factory\PatronControllerFactory::class,
+            Controller\IndexController::class => Controller\IndexControllerFactory::class,
+            Controller\PatronController::class => Controller\PatronControllerFactory::class,
         ],
     ],
     'view_manager' => [
