@@ -1,13 +1,17 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2017 Tohu development team
  * @license   https://www.gnu.org/licenses/gpl.html GNU GENERAL PUBLIC LICENSE Version 3
  */
 
+namespace Tohu\ILS\Driver;
+
 use Scriptotek\Ncip\NcipConnector;
 use Scriptotek\Ncip\NcipClient;
 
-namespace Tohu\ILS\Driver;
+
 
 class NCIP extends AbstractDriver
 {

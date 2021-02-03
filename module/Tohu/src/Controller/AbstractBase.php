@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
 * Tohu controller base
 */
@@ -10,6 +12,8 @@ use Laminas\Mvc\Controller\AbstractActionController;
 class AbstractBase extends AbstractActionController
 {
     protected $config;
+
+    protected array $mode;
 
     /**
      * Constructor
