@@ -12,7 +12,7 @@ use Laminas\Mvc\MvcEvent;
 
 class Module
 {
-    const VERSION = '0.1dev';
+    const VERSION = '0.2';
 
     public function getConfig(): array
     {
