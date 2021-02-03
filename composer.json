@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.4",
         "phpmailer/phpmailer": "^6.0",
         "cap60552/php-sip2": "^1.0",
         "laminas/laminas-http": "^2.8",
