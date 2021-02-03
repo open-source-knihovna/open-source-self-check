@@ -98,6 +98,9 @@ class SIP2 extends AbstractDriver
     protected function dateFromSip(string $sip_date): string
     {
         $date = \DateTime::createFromFormat("Ymd", substr($sip_date, 0, 8));
+        if ($date === false) {
+            return $sip_date;
+        }
         return $date->format($this->date_format);
     }
 
