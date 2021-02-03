@@ -45,13 +45,31 @@ class Demo extends AbstractDriver
 
     public function getPatron($patronBarcode)
     {
+        $checkouts = [
+            [
+                'title' => 'I am the only one',
+                'item_location' => 'Item location',
+                'checkout_location' => 'Checkout location',
+                'barcode' => '123456',
+                'due_date' => '2025-02-11',
+                'circulation_status' => 'Checked out',
+            ],
+            [
+                'title' => 'I am the only two',
+                'item_location' => 'Item location',
+                'checkout_location' => 'Checkout location',
+                'barcode' => '654321',
+                'due_date' => '2025-03-12',
+                'circulation_status' => 'Checked out',
+            ],
+        ];
         return [
             'barcode' => $patronBarcode,
             'name' => "John Doe",
             'email' => "john.doe@example.com",
             'overdues' => 3,
             'holds' => 4,
-            'checkouts' => 5,
+            'checkouts' => $checkouts,
             'fines' => 20,
             'blocked' => false,
         ];
