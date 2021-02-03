@@ -62,7 +62,6 @@ class SIP2 extends AbstractDriver
             'email' => $patron['patron']->variable['BE'][0] ?? '',
             'overdues' => $patron['patron']->fixed['OverdueCount'] ?? 0,
             'holds' => $patron['patron']->fixed['HoldCount'] ?? 0,
-            'checkouts' => $patron['patron']->fixed['ChargedCount'] ?? 0,
             'fines' => $patron['patron']->variable['BV'][0] ?? 0,
             'blocked' => (strpos($patron['patron']->fixed['PatronStatus'], 'Y') === false) ? false : true,
             'checkouts' => $checkouts,
@@ -108,7 +107,7 @@ class SIP2 extends AbstractDriver
             case 1: return "other";
             case 2: return "on order";
             case 3: return "available ";
-            case 4: return "charged ";
+            case 4: return "charged";
             case 5: return "charged; not to be recalled until earliest recall date";
             case 6: return "in process";
             case 7: return "recalled";

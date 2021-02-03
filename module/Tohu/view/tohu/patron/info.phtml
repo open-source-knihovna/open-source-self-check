@@ -34,7 +34,7 @@
         <?php if ($this->patron['blocked']): ?>
             <div class="alert alert-danger"><?=$this->translate("Your account was blocked. Contact library for further assistance.")?></div>
         <?php endif; ?>
-        <?php if (count($this->patron['overdues']) > 0 ): ?>
+        <?php if (($this->patron['overdues'] ?? 0) > 0 ): ?>
             <div class="alert alert-warning"><?=$this->translate("You have some checkout overdue. You may or may not be able to checkout more items. It will depend on your library's policy.")?></div>
         <?php endif; ?>
           <?php foreach(['checkin', 'checkout'] as $form_mode) {

@@ -1,13 +1,13 @@
-FROM php:7.1-apache
+FROM php:7.4-apache
 
 LABEL maintainer "josef.moravec@gmail.com"
 
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends apt-utils git libicu-dev zlib1g-dev && \
+    apt-get install -y --no-install-recommends apt-utils git libicu-dev zlib1g-dev libzip-dev && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install intl json mbstring mysqli pdo pdo_mysql zip sockets
+RUN docker-php-ext-install intl mysqli pdo pdo_mysql zip sockets
 
 RUN a2enmod rewrite && \
     sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-enabled/000-default.conf && \
