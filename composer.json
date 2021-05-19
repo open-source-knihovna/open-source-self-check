@@ -14,7 +14,6 @@
         "laminas/laminas-i18n": "^2.9",
         "laminas/laminas-mvc-i18n": "^1.1",
         "laminas/laminas-servicemanager": "^3.3",
-        "laminas/laminas-servicemanager-di": "^1.2",
         "laminas/laminas-view": "^2.10",
         "laminas/laminas-json": "^3.1",
         "laminas/laminas-session": "^2.8",
